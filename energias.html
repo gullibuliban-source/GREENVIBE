@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Energías Limpias - GreenVibe</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+ <link rel="icon" href="logodelapagina.png" type="image/png">
+<link rel="stylesheet" href="style.css">
+
+<head>
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #eafaf1;
+        margin: 0;
+    }
+
+    .energia-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+
+    .titulo-energia {
+        text-align: center;
+        color: #1A8F4B;
+        font-size: 2.6rem;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+
+    .subtitulo {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+        color: #444;
+        font-weight: 400;
+    }
+
+    .tarjetas-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+    }
+
+    .tarjeta {
+        background: white;
+        padding: 25px;
+        border-radius: 14px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        transition: transform .2s ease, box-shadow .2s ease;
+        border-left: 6px solid #1A8F4B;
+        text-align: center;
+    }
+
+    .tarjeta:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .tarjeta h3 {
+        color: #1A8F4B;
+        margin-bottom: 12px;
+    }
+
+    .tarjeta img {
+        width: 120px;
+        margin-bottom: 15px;
+    }
+
+    .tarjeta ul {
+        padding-left: 18px;
+        text-align: left;
+    }
+
+    .tarjeta-full {
+        grid-column: span 2;
+    }
+
+    @media(max-width: 700px) {
+        .tarjeta-full {
+            grid-column: span 1;
+        }
+    }
+
+    .btn-volver {
+        display: block;
+        width: fit-content;
+        margin: 50px auto 70px auto;
+        padding: 12px 25px;
+        border: none;
+        background: #27ae60;
+        color: white;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+</style>
+</head>
+
+<body>
+
+<header>
+     <h1 onclick="scrollToTop()" style="display:flex; align-items:center; gap:10px; cursor:pointer;">
+  <img src="logodelapagina.png" alt="Logo" style="width:70px; height:70px; object-fit:contain;">
+  GreenVibe</h1>
+    <div class="menu-toggle" id="menu-btn">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <nav id="menu">
+      <a href="otra pagina web.html">Inicio</a>
+      <a href="otra pagina web.html">Nosotros</a>
+      <a href="otra pagina web.html">Aprende</a>
+      <a href="otra pagina web.html">EcoTips</a>
+      <a href="otra pagina web.html">Contacto</a>
+    </nav>
+  </header>
+
+<main class="energia-container">
+    <h1 class="titulo-energia">🌞 Energías Limpias</h1>
+    <p class="subtitulo">Descubre las fuentes de energía que ayudan a proteger el planeta.</p>
+
+    <div class="tarjetas-grid">
+
+        <div class="tarjeta">
+            <img src="energia.png" alt="Energía Solar">
+            <h3>Energía Solar</h3>
+            <p>Aprovecha la luz del sol para generar electricidad mediante paneles solares.</p>
+        </div>
+
+        <div class="tarjeta">
+            <img src="energiaeolica.png" alt="Energía Eólica">
+            <h3>Energía Eólica</h3>
+            <p>Se obtiene del viento usando turbinas que generan electricidad limpia.</p>
+        </div>
+
+        <div class="tarjeta">
+            <img src="energiahidroelectrica.png" alt="Energía Hidráulica">
+            <h3>Energía Hidráulica</h3>
+            <p>Proviene del movimiento del agua en ríos y presas para producir energía.</p>
+        </div>
+
+        <div class="tarjeta">
+            <img src="casaecologica.png" alt="Energía Geotérmica">
+            <h3>Energía Geotérmica</h3>
+            <p>Utiliza el calor interno de la Tierra para generar electricidad y calefacción.</p>
+        </div>
+
+        <div class="tarjeta tarjeta-full">
+            <img src="energialimpia.png" alt="Beneficios">
+            <h3>Beneficios de las energías limpias</h3>
+            <ul>
+                <li>Reducen emisiones contaminantes.</li>
+                <li>Son renovables y no se agotan.</li>
+                <li>Ayudan a combatir el cambio climático.</li>
+                <li>Mejoran la calidad del aire.</li>
+            </ul>
+        </div>
+
+    </div>
+</main>
+
+<button class="btn-volver" onclick="window.location.href='otra pagina web.html'">⬅ Volver al inicio</button>
+
+<script>  // --- MENÚ RESPONSIVE ---
+    const menuBtn = document.getElementById('menu-btn');
+    const navMenu = document.getElementById('menu');
+    menuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });</script>
+
+<footer>
+    <p>© 2025 GreenVibe - Promoviendo un planeta más verde 🌍</p>
+</footer>
+
+</body>
+</html>

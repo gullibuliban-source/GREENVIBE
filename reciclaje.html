@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Reciclaje Inteligente - GreenVibe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="logodelapagina.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+
+<style>
+    /* Tipografía igual a la página principal */
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #eafaf1;
+        margin: 0;
+    }
+
+    /* Contenedor */
+    .reciclaje-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+
+    /* Títulos */
+    .titulo-reciclaje {
+        text-align: center;
+        color: #1A8F4B;
+        font-size: 2.6rem;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+
+    .subtitulo {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+        color: #444;
+        font-weight: 400;
+    }
+
+    /* Grid */
+    .tarjetas-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+    }
+
+    /* Tarjetas */
+    .tarjeta {
+        background: white;
+        padding: 25px;
+        border-radius: 14px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        transition: transform .2s ease, box-shadow .2s ease;
+        border-left: 6px solid #1A8F4B;
+        text-align: center;
+    }
+
+    .tarjeta:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .tarjeta h3 {
+        color: #1A8F4B;
+        margin-bottom: 12px;
+    }
+
+    .tarjeta img {
+        width: 90px;
+        margin-bottom: 15px;
+    }
+
+    .tarjeta ul {
+        padding-left: 18px;
+        text-align: left;
+    }
+
+    .tarjeta-full {
+        grid-column: span 2;
+    }
+
+    button { margin:40px auto; display:block; padding:14px 32px; background:#1A8F4B; color:#fff; border:none; border-radius:25px; font-size:17px; cursor:pointer; font-weight:600; box-shadow:0 4px 10px rgba(0,0,0,0.15);} 
+
+
+
+    /* Responsive */
+    @media(max-width: 700px) {
+        .tarjeta-full {
+            grid-column: span 1;
+        }
+    }
+
+   </style>
+
+</head>
+
+<body>
+
+<header>
+     <h1 onclick="scrollToTop()" style="display:flex; align-items:center; gap:10px; cursor:pointer;">
+  <img src="logodelapagina.png" alt="Logo" style="width:70px; height:70px; object-fit:contain;">
+  GreenVibe</h1>
+
+    <div class="menu-toggle" id="menu-btn">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
+    <nav id="menu">
+      <a href="otra pagina web.html">Inicio</a>
+      <a href="otra pagina web.html">Nosotros</a>
+      <a href="otra pagina web.html">Aprende</a>
+      <a href="otra pagina web.html">EcoTips</a>
+      <a href="otra pagina web.html">Contacto</a>
+    </nav>
+  </header>
+
+<main class="reciclaje-container">
+    <h1 class="titulo-reciclaje">♻ Reciclaje Inteligente</h1>
+    <p class="subtitulo">Aprende a reducir tu impacto ambiental reciclando correctamente.</p>
+
+    <div class="tarjetas-grid">
+
+        <div class="tarjeta">
+            <img src="reciclar.png" alt="Icono reciclar">
+            <h3>¿Qué es reciclar?</h3>
+            <p>Es transformar residuos en nuevos productos útiles, reduciendo contaminación y el uso de recursos naturales.</p>
+        </div>
+
+        <div class="tarjeta">
+            <img src="reutilizar.png" alt="Materiales reciclables">
+            <h3>Materiales Reciclables</h3>
+            <ul>
+                <li>Plástico</li>
+                <li>Papel y cartón</li>
+                <li>Vidrio</li>
+                <li>Metales</li>
+                <li>Residuos electrónicos</li>
+            </ul>
+        </div>
+
+        <div class="tarjeta">
+            <img src="papelera.png" alt="Regla 3R">
+            <h3>Regla de las 3R</h3>
+            <p><b>Reducir:</b> Consume solo lo necesario.</p>
+            <p><b>Reutilizar:</b> Aprovecha los objetos varias veces.</p>
+            <p><b>Reciclar:</b> Separa tus residuos correctamente.</p>
+        </div>
+
+        <div class="tarjeta tarjeta-full">
+            <img src="basura.png" alt="Acciones prácticas">
+            <h3>Acciones prácticas para reciclar mejor</h3>
+            <ul>
+                <li>Separa basura orgánica e inorgánica.</li>
+                <li>Lava envases antes de reciclar.</li>
+                <li>Identifica los contenedores de reciclaje.</li>
+                <li>Reduce el uso de plásticos desechables.</li>
+            </ul>
+        </div>
+
+</main>
+
+<button onclick="window.location.href='otra pagina web.html'">⬅ Volver al inicio</button>
+
+<script>  // --- MENÚ RESPONSIVE ---
+    const menuBtn = document.getElementById('menu-btn');
+    const navMenu = document.getElementById('menu');
+    menuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });</script>
+
+  <footer>
+    <p>© 2025 GreenVibe - Promoviendo un planeta más verde 🌍</p>
+  </footer>
+
+</body>
+</html>
